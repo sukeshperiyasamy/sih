@@ -8,15 +8,14 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-         background-image: url('webpage.jpg');
-            background-position: center center;
-            background-attachment: fixed;
+            background: url('https://via.placeholder.com/1920x1080.png?text=Water+Bacteria+Detection') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.5s ease;
         }
 
         .container {
@@ -66,6 +65,11 @@
         #submit-button:hover {
             background-color: #45a049;
         }
+
+        /* Dynamic background class */
+        .dark-mode {
+            background: rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body>
@@ -99,6 +103,11 @@
         alert("Image submitted for detection.");
         // Implement the actual submission logic here
     }
+
+    // Dynamic background effect for bacteria detection theme (switches mode)
+    setInterval(function() {
+        document.body.classList.toggle('dark-mode');
+    }, 5000); // Changes background every 5 seconds
 </script>
 
 </body>
